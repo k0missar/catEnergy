@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: {{projectTitle}}</title>
+  </head>
+  <body class="page__body">
+
+    <header class="header">
+      <a href="" class="header__logo">
+        <img src="img/logo-mobile.svg" alt="Логотип сайта Cat-Energy">
+        <img src="img/full-logo-2.svg" alt="">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html" class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Каталог продукции</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+        <section class="select-program">
+            <h1>Подбор программы</h1>
+            <form class="cat-info" action="#" method="post">
+                <p>Заполните анкету, и мы подберем программу питаня для вашего кота</p>
+                <fieldset class="cat-info__group">
+                    <label class="cat-info__label" for="name">Имя:*</label>
+                    <input class="cat-info__input" type="text" id="name" placeholder="Барсик" required>
+                    <label class="cat-info__label" for="the-weight">Вес (кг):*</label>
+                    <input class="cat-info__input" type="number" id="the-weight" placeholder="7" required>
+                    <label class="cat-info__label" for="age">Возраст (лет):</label>
+                    <input class="cat-info__input" type="number" id="age" placeholder="7">
+                    <input class="cat-info__radio" type="radio" name="programm" id="losing-weight" value="Похудение" checked>
+                    <label class="cat-info__label" for="losing-weight">Похудение</label>
+                    <input class="cat-info__radio" type="radio" name="programm" id="set-mass" value="Похудение">
+                    <label class="cat-info__label" for="set-mass">Набор массы</label>
+                    <input class="cat-info__radio" type="radio" name="programm" id="unknown" value="Похудение">
+                    <label class="cat-info__label" for="unknown">Не знаю (нужен ваш совет)</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Контактные данные (владельца кота)</legend>
+                    <label for="mail">E-mail:*</label>
+                    <input type="email" id="mail" placeholder="kuklachev@gmail.com" required>
+                    <label for="phone">Телефон:*</label>
+                    <input type="tel" id="phone" placeholder="8 (960) 900-60-90" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Комментарий</legend>
+                    <textarea name="" id="" cols="30" rows="10">Расскажите обо всех повадках</textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Дополнительно</legend>
+                    <input type="checkbox" checked id="sugar">
+                    <label for="sugar">Сахарозаменитель</label>
+                    <input type="checkbox" id="water">
+                    <label for="water">Питьевая вода</label>
+                    <input type="checkbox" id="milk">
+                    <label for="milk">Молоко</label>
+                    <input type="checkbox" id="vitamins">
+                    <label for="vitamins">Витамины</label>
+                </fieldset>
+                <button class="button" type="submit">Отправить заявку</button>
+                <p>* - Обязательные поля</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="page__footer">
+      <h2>Контактная информация</h2>
+      <div class="contact-info">
+        <h2 class="title">Приглашаем к сотрудничеству дилеров!</h2>
+        <p class="contact-info__adress">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </p>
+        <img class="contact-info__map" src="img/map.jpg" alt="Карта расположения офиса">
+      </div>
+      <a class="footer__logo" href="">
+        <img src="img/full-logo-2.svg" alt="">
+      </a>
+      <div class="social-icon">
+        <a href="#" class="social-icon__link"><img src="img/icon_vkontakte.svg" alt="Перейти в Вконтакте"></a>
+        <a href="#" class="social-icon__link"><img src="img/icon_instagram.svg" alt="Перейти в Инстаграмм"></a>
+        <a href="#" class="social-icon__link"><img src="img/icon_facebook.svg" alt="Перейти в Фейсбук"></a>
+      </div>
+      <div class="developer">
+        <p class="developer__text">
+          HTML Academy
+        </p>
+        <img src="img/htmlacademy.svg" alt="" class="developer__logo" width="20px" height="20px">
+      </div>
+    </footer>
+  </body>
+</html>
