@@ -1,0 +1,84 @@
+.programs {
+  &__item {
+    width: 280px;
+    margin: 20px auto 0;
+    padding: 24px 20px 22px;
+    background-color: @color-white-smoky;
+    @media (min-width: @tablet-width) {
+      width: 708px;
+      position: relative;
+      padding: 77px 0 52px 52px;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  &__picture {
+    margin-right: 11px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @color-green;
+    border-radius: 50%;
+    overflow: visible;
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 50px;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &__img {
+    max-width: 67px;
+    max-height: 50px;
+    @media (min-width: @tablet-width) {
+      max-width: 268px;
+      max-height: 192px;
+    }
+  }
+  &__title {
+    .font-heading(@size: 24px; @height: 37px);
+    text-transform: uppercase;
+    margin-left: 10px;
+    color: #000000;
+    @media (min-width: @tablet-width) {
+      .font-heading(@size: 36px; @height: 36px);
+      margin-left: 0;
+    }
+  }
+  &__text {
+    .font-body();
+    color: #444444;
+    border-bottom: 1px solid @color-white-silver;
+    padding-bottom: 23px;
+    @media (min-width: @tablet-width) {
+      max-width: 377px;
+      border-bottom: none;
+    }
+  }
+  &__link {
+    display: block;
+    position: relative;
+    font-family: 'Oswald', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+  }
+  &__link::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 100px;
+    background-image: url(/img/icon_arrow.svg);
+    width: 32px;
+    height: 10px;
+  }
+}

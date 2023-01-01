@@ -1,0 +1,60 @@
+.choose-program {
+  padding-top: 25px;
+  background-image: linear-gradient(to bottom, rgba(@color-green--rgb, 0.85) 302px, transparent 302px), url(/img/index-background-cat.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  @media (min-width: @tablet-width) {
+    position: relative;
+    background-color: @color-white;
+    background-image: none;
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+  &__title {
+    .font-heading();
+    text-align: center;
+    color: @color-white;
+    width: 280px;
+    margin: 0 auto;
+    @media (min-width: @tablet-width) {
+      .font-heading(@size: 60px; @height: 60px);
+      text-align: left;
+      color: @color-black;
+      width: 414px;
+      margin-left: 117px;
+    }
+  }
+  &__text {
+    .font-body(@family: 'Oswald', serif; @weight: 400; @size: 14px; @height: 14px);
+    color: @color-white;
+    text-align: center;
+    width: 280px;
+    margin: 25px auto 0;
+    @media (min-width: @tablet-width) {
+      .font-body(@family: 'Oswald', serif; @weight: 400; @size: 20px; @height: 20px);
+      text-align: left;
+      color: @color-black;
+      margin: 41px 0 20px 117px;
+      width: 414px;
+    }
+  }
+  &__img {
+    display: block;
+    margin: 29px auto 0;
+    @media (min-width: @tablet-width) {
+      width: 709px;
+      height: 609px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+  }
+  &__button {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 255px;
+      left: 117px;
+      width: 244px;
+      height: 54px;
+    }
+  }
+}

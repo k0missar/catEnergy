@@ -1,0 +1,44 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 22px 22px 22px;
+  border-bottom: 1px solid @color-white-smoky;
+  width: 320px;
+  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    width: 150px;
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__logo-img img {
+    width: 33px;
+    height: 37px;
+    @media (min-width: @tablet-width) {
+      margin-right: 12px;
+    }
+  }
+
+  &__logo-text img {
+    height: 18px;
+  }
+
+  &__btn-menu {
+    width: 25px;
+    height: 17px;
+    background-image: url(/img/Logo_mobile.svg);
+    background-color: @color-white;
+    background-size: contain;
+    border: none;
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+    &--open {
+      background-image: url(/img/Logo_mobile.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}

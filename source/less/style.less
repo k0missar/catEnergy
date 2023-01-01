@@ -1,0 +1,152 @@
+// Начните писать стили здесь
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Переменные
+@color-black: #000000;
+@color-white: #ffffff;
+@color-gray: #444444;
+@color-green: #68b738;
+@color-green--rgb: 104, 183, 56;
+@color-white-light: #f2f2f2;
+@color-white-dark: #eaeaea;
+@color-white-smoky: #e6e6e6;
+@color-white-silver: #d9d9d9;
+
+@tablet-width: 768px;
+@desktop-width: 14440px;
+
+// Шаблоны
+.font-menu-item (@family: 'Oswald', serif; @weight: 500; @size: 20px; @height: 20px; @transform: uppercase; ) {
+  font-family: @family;
+  font-weight: @weight;
+  font-size: @size;
+  line-height: @height;
+  text-transform: @transform;
+}
+
+.font-heading (@family: 'Oswald', serif; @weight: 400; @size: 36px; @height: 40px; ) {
+  font-family: @family;
+  font-weight: @weight;
+  font-size: @size;
+  line-height: @height;
+}
+
+.font-body (@family: 'Arial', serif; @weight: 400; @size: 14px; @height: 18px; ) {
+  font-family: @family;
+  font-weight: @weight;
+  font-size: @size;
+  line-height: @height;
+}
+
+//Стандрат
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  .font-body();
+  color: @color-gray;
+  min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    min-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: @desktop-width;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  .font-heading();
+  color: @color-white;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  .font-heading();
+  color: @color-black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Блоки
+//Шапка
+.header {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+}
+
+@import 'block/logo.less'; //Логотипы
+@import 'block/main-nav.less'; //Меню
+@import 'block/button.less'; //Кнопка
+@import 'block/choose-program.less'; //Программа для котов
+@import 'block/programs.less'; //Список программ для кота
+
+//Живой пример
+.example-cat {
+  background-color: @color-white-light;
+}
+
+//Подвал
+.page__footer {
+  background-color: @color-white-light;
+}
+
+//Контактная информация
+.contact-info {
+  background-color: @color-white;
+}
+
+//Каталог продукции
+.products {
+  &__title {
+    .font-heading();
+  }
+}
