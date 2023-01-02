@@ -29,7 +29,7 @@
 @color-white-silver: #d9d9d9;
 
 @tablet-width: 768px;
-@desktop-width: 14440px;
+@desktop-width: 1444px;
 
 // Шаблоны
 .font-menu-item (@family: 'Oswald', serif; @weight: 500; @size: 20px; @height: 20px; @transform: uppercase; ) {
@@ -120,6 +120,10 @@ ul {
     justify-content: space-around;
     width: @tablet-width;
     margin: 0 auto;
+  }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    justify-content: space-between;
   }
 }
 

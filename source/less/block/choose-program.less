@@ -10,6 +10,14 @@
     width: @tablet-width;
     margin: 0 auto;
   }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding-top: 114px;
+    padding-left: 190px;
+    padding-bottom: 185px;
+    background-image: linear-gradient(to left, rgba(@color-green--rgb, 0.85) 720px, transparent 720px), url(/img/background-desktop.jpg);
+    background-position: right center;
+  }
   &__title {
     .font-heading();
     text-align: center;
@@ -22,6 +30,9 @@
       color: @color-black;
       width: 414px;
       margin-left: 117px;
+    }
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
     }
   }
   &__text {
@@ -37,6 +48,9 @@
       margin: 41px 0 20px 117px;
       width: 414px;
     }
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+    }
   }
   &__img {
     display: block;
@@ -47,6 +61,14 @@
       object-fit: contain;
       margin: 0 auto;
     }
+    @media (min-width: @desktop-width) {
+      width: 552px;
+      height: 499px;
+      object-fit: contain;
+      position: absolute;
+      top: 10%;
+      left: 40%;
+    }
   }
   &__button {
     @media (min-width: @tablet-width) {
@@ -55,6 +77,13 @@
       left: 117px;
       width: 244px;
       height: 54px;
+    }
+    @media (min-width: @desktop-width) {
+      position: static;
+      margin-left: 0;
+      margin-top: 52px;
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 }
