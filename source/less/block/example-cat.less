@@ -1,0 +1,108 @@
+.example-cat {
+  padding-top: 27px;
+  background-color: @color-white-light;
+  padding-bottom: 25px;
+  &__title {
+    margin-bottom: 33px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-bottom: 26px;
+    :first-of-type::after {
+      content: "снижение\0a веса";
+      position: absolute;
+      .font-body(@family: 'Arial'; @size: 12px; @height: 12px);
+      width: 87px;
+      white-space: pre;
+      background-color: @color-white-light;
+      text-align: center;
+      bottom: -15px;
+    }
+    :last-of-type::after {
+      content: "затрачено времени";
+      position: absolute;
+      .font-body(@family: 'Arial'; @size: 12px; @height: 12px);
+      width: 87px;
+      background-color: @color-white-light;
+      text-align: center;
+      bottom: -15px;
+    }
+  }
+  &__item {
+    //position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid @color-silver-light;
+    border-radius: 3px;
+    width: 124px;
+    height: 56px;
+    .font-body(@family: 'Oswald'; @size: 24px; @height: 24px);
+  }
+  &__commercial {
+    .font-body(@family: 'Oswald', serif; @height: 20px);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  /* &__slide {
+    display: inline-block;
+    appearance: none;
+    background-color: @color-white;
+    border: 1px solid @color-silver-light;
+    border-radius: 6px;
+    width: 84px;
+    height: 14px;
+    ::-webkit-slider-runnable-track {
+      background-color: @color-green;
+      border-radius: 6px;
+      height: 6px;
+    }
+    ::-webkit-slider-thumb {
+      width: 6px;
+      height: 6px;
+      background: @color-green;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  } */
+  &__block {
+    display: flex;
+    position: relative;
+  }
+  &__green-block {
+    width: 140px;
+    height: 210px;
+    //background-color: @color-green;
+    background-image: url(/img/cat-1-280.webp);
+  }
+  &__yellow-block {
+    position: relative;
+    overflow: hidden;
+    width: 140px;
+    height: 210px;
+    //background-color: #ffd700;
+  }
+  &__yellow-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 280px;
+    min-height: 200px;
+  }
+  &__controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &__label {
+    display: flex;
+    width: 70px;
+    height: 40px;
+    .font-body(@family: 'Oswald', serif; @size: 16px; @height: 20px);
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+  }
+}
