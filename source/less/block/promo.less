@@ -1,15 +1,33 @@
 .promo {
   width: 280px;
   margin: 27px auto 42px;
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
   &__title {
     margin-bottom: 38px;
+    @media (min-width: @tablet-width) {
+      .font-heading(@size: 60px; @height: 60px);
+    }
   }
   &__list {
-
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 230px 230px;
+      grid-template-rows: 280px;
+      grid-auto-rows: 280px;
+      gap: 37px 153px;
+      counter-reset: example 0;
+    }
   }
   &__item {
     display: flex;
     margin-bottom: 20px;
+    @media (min-width: @tablet-width) {
+      flex-direction: column;
+      justify-content: start;
+      position: relative;
+    }
   }
   &__picture {
     display: flex;
@@ -18,9 +36,30 @@
     min-width: 60px;
     min-height: 60px;
     background-color: @color-green;
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
   }
   &__text {
     margin: 0;
     margin-left: 20px;
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo__item::after {
+    counter-increment: example 1;
+    content: counter(example);
+    position: absolute;
+    right: 0;
+    top: -40px;
+    .font-body(@family: 'Oswald', serif; @size: 280px; @height: 280px);
+    color: @color-white-light;
+    z-index: -1;
   }
 }
