@@ -4,10 +4,17 @@
   @media (min-width: @tablet-width) {
     width: 708px;
   }
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin-bottom: 69px;
+  }
   &__title {
     margin-bottom: 38px;
     @media (min-width: @tablet-width) {
       .font-heading(@size: 60px; @height: 60px);
+    }
+    @media (min-width: @desktop-width) {
+      margin-left: 20px;
     }
   }
   &__list {
@@ -18,6 +25,11 @@
       grid-auto-rows: 280px;
       gap: 37px 153px;
       counter-reset: example 0;
+    }
+    @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(4, 235px);
+      gap: 37px 79px;
+      justify-content: center;
     }
   }
   &__item {
