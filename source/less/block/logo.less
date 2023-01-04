@@ -12,7 +12,11 @@
     padding: 0;
     margin: 0;
   }
-
+  &:hover {
+    @media (min-width: @tablet-width) {
+      opacity: .6;
+    }
+  }
   &__logo-img img {
     width: 33px;
     height: 37px;
@@ -23,11 +27,9 @@
       margin-left: 110px;
     }
   }
-
   &__logo-text img {
     height: 18px;
   }
-
   &__btn-menu {
     width: 25px;
     height: 17px;

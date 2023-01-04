@@ -40,6 +40,18 @@
       justify-content: start;
       position: relative;
     }
+    &::after {
+      @media (min-width: @tablet-width) {
+        counter-increment: example 1;
+        content: counter(example);
+        position: absolute;
+        right: 0;
+        top: -40px;
+        .font-body(@family: 'Oswald', serif; @size: 280px; @height: 280px);
+        color: @color-white-light;
+        z-index: -1;
+      }
+    }
   }
   &__picture {
     display: flex;
@@ -60,18 +72,5 @@
     @media (min-width: @tablet-width) {
       margin-left: 0;
     }
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .promo__item::after {
-    counter-increment: example 1;
-    content: counter(example);
-    position: absolute;
-    right: 0;
-    top: -40px;
-    .font-body(@family: 'Oswald', serif; @size: 280px; @height: 280px);
-    color: @color-white-light;
-    z-index: -1;
   }
 }

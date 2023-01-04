@@ -38,6 +38,10 @@
   }
   &__soc-link {
     display: block;
+    &:hover path {
+      fill: @color-green;
+      stroke: @color-green;
+    }
   }
   &__developer {
     display: flex;
@@ -51,7 +55,12 @@
       margin-right: 22px;
     }
   }
-  svg path {
-    fill: @color-gray;
+  &__logo-dev {
+    path {
+      fill: @color-gray;
+    }
+    &:hover path {
+        fill: @color-green;
+    }
   }
 }

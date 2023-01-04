@@ -29,15 +29,24 @@
       margin-right: 35px;
       margin-bottom: 10px;
     }
+    &:hover{
+      @media (min-width: @tablet-width) {
+        opacity: .6;
+        border-bottom-color: rgba(@color-green--rgb, 0.6);
+      }
+      @media (min-width: @desktop-width) {
+        border-bottom-color: rgba(@color-white--rgb, 0.6);
+      }
+    }
     &--current {
       @media (min-width: @tablet-width) {
         border-bottom: 2px solid @color-green;
-      }
+        }
       @media (min-width: @desktop-width) {
         border-color: @color-white;
+        }
       }
     }
-  }
   &__link {
     display: block;
     margin: 22px auto;
