@@ -7,7 +7,7 @@
     @media (min-width: @tablet-width) {
       display: flex;
       flex-wrap: wrap;
-      :last-child {
+      &:last-child {
         margin-right: 0;
       }
     }
@@ -15,6 +15,12 @@
       width: 720px;
       justify-content: center;
       background-image: linear-gradient(rgba(@color-green--rgb, 0.85), rgba(@color-green--rgb, 0.85)), linear-gradient(#4b4b4b, #4b4b4b);
+    }
+    &--noindex {
+      @media (min-width: @desktop-width) {
+        background-color: @color-white;
+        background-image: none;
+      }
     }
   }
   &__item {
@@ -45,8 +51,13 @@
       @media (min-width: @desktop-width) {
         border-color: @color-white;
         }
-      }
     }
+    &--current-noindex {
+      @media (min-width: @desktop-width) {
+        border-color: @color-black;
+        }
+    }
+  }
   &__link {
     display: block;
     margin: 22px auto;
@@ -59,6 +70,12 @@
     }
     @media (min-width: @desktop-width) {
       color: @color-white;
+    }
+    &--noindex {
+      @media (min-width: @desktop-width) {
+        color: @color-black;
+        .font-menu-item(@weight: 400; @size: 18px; @height: 24px);
+      }
     }
   }
 }
